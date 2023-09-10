@@ -8,17 +8,7 @@
 <p class="card-text">Artista</p>
 <p class="card-text">Categoria</p>
 <p class="card-text">{{$product->price}}€</p>
-<a href="{{route('product.edit',compact('product'))}}"class="btn">Modifica</a>
 
-<form action="{{route('product.delete', compact('product'))}}" method="POST">
-
-        @method('DELETE')
-
-        @csrf
-
-        <button type="submit" >Cancella</button>
-
-    </form>
 
 </div>
 </div>

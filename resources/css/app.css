@@ -42,6 +42,8 @@
     background-color: transparent;
     backdrop-filter: blur(9px) saturate(0.8);
     height: 50px;
+    position: relative;
+    z-index: 99;
 
 }
 
@@ -316,4 +318,13 @@
         0% {background-position: left;};
         100%{background-position: right;}
 
+    }
+
+
+
+    /*! DASHBOARD */
+
+    .addPro{
+        background-color: burlywood;
+        width: 150px;
     }

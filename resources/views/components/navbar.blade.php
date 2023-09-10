@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg fixed-top navbar-blur" id="navbar">
+<nav class="navbar navbar-expand-lg navbar-blur" id="navbar">
   <div class="container-fluid">
     <a class="navbar-brand" style="font-size: 30px" href="{{route('welcome')}}">TelaElegante</a>
 
@@ -1583,9 +1583,7 @@
           <a class="nav-link active" aria-current="page" href="{{route('welcome')}}">Home</a>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="{{route('product.create')}}">CREA PRODOTTI</a>
-        </li>
+
 
         <li class="nav-item">
           <a class="nav-link" href="{{route('product.index')}}">STORE</a>
@@ -1603,12 +1601,6 @@
           </ul>
         </li>
       </ul>
-
-
-
-
-
-
       <ul class="navbar-nav ml-auto">
         @auth
           @if(Auth::user()->is_admin == true)

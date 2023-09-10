@@ -3,10 +3,15 @@
     <br>
     <br>
 
+<video class="video-bg" src="/pittura2.mp4" autoplay muted loop></video>
+
 <div class="container my-5">
-    <div class="row">
+    <div class="row justify-content-center">
         <div class="col-12 col-md-6">
-<h1>REgistrati</h1>
+
+            <div class="add">
+                <div class="add-body">
+<h1 class="text-center mb-4">Registrati</h1>
 @if($errors->any())
 @foreach ($errors->all() as $error)
     <div class="alert alert-danger">
@@ -16,7 +21,7 @@
 @endif
 
 
-<form action="{{route('register')}}" method="POST">
+<form action="{{route('register')}}" method="POST" class="my-form">
 
   @csrf
 <div class="mb-3">
@@ -35,14 +40,15 @@
     <label class="form-label">Conferma Password</label>
     <input type="password" name="password_confirmation" class="form-control">
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary">Registrati</button>
 </form>
  </div>
 </div>
 </div>
 </div>
 
-
+</div>
+</div>
 
 
 </x-layout>

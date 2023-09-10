@@ -19,7 +19,7 @@ class ProductController extends Controller
 
     public function index()
     {
-        $products = Product::oldest()->get(); 
+        $products = Product::oldest()->get();
       return view('product.index', compact('products'));
     }
 
@@ -29,7 +29,7 @@ class ProductController extends Controller
     public function create(){
         return view('product.create');
        }
-       
+
 
     /**
      * Store a newly created resource in storage.
@@ -51,7 +51,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        return view('product.show',compact('product')); 
+        return view('product.show',compact('product'));
     }
 
     /**
@@ -59,8 +59,8 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-            return view('product.edit',compact('product')); 
-                
+            return view('product.edit',compact('product'));
+
     }
 
     /**
@@ -69,37 +69,37 @@ class ProductController extends Controller
     public function update(Request $request, Product $product)
     {
 
-        $product->update([ 
+        $product->update([
 
-        $product->name = $request->name, 
+        $product->name = $request->name,
 
-        $product->price = $request->price, 
+        $product->price = $request->price,
 
-        ]); 
+        ]);
 
-        if($request->img){ 
+        if($request->img){
 
-            $product->update ([ 
-    
-                $product->img = $request->file('img')->store('public/product') 
-    
-            ]); 
-        } 
-    return redirect()->route('product.index')->with('message',"il prodotto $product->name è stato modificato correttamente!"); 
-    
-        } 
+            $product->update ([
 
-    
+                $product->img = $request->file('img')->store('public/product')
+
+            ]);
+        }
+    return redirect()->route('product.index')->with('message',"il prodotto $product->name è stato modificato correttamente!");
+
+        }
+
+
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Product $product){ 
+    public function destroy(Product $product){
 
-        $product->delete(); 
+        $product->delete();
 
-        return redirect()->route('product.index'); 
+        return redirect()->route('admin.dashboard');
 
-        } 
-    
+        }
+
 }
