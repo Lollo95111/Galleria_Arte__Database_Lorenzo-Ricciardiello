@@ -1,23 +1,68 @@
-<x-layout> 
+<x-layout>
 
-    <div class="container"> 
 
-        <div class="row"> 
+<br>
+<br>
 
-            @foreach($products as $product) 
+<video class="video-bg" src="/pittura6.mp4" autoplay muted loop></video>
 
-            <div class="col-12 col-md-3"> 
 
-            <a style="text-decoration: none;" href="{{route('product.show',$product)}}"><x-cards :Product='$product'></x-cards></a> 
 
-            </div> 
+<!-- INIZIO GRID -->
 
-            @endforeach 
+<header style="position: relative; z-index:99;" class='contenitore my-5'>
+    <div class="galleria">
+      <figure class="galleria__elemento galleria__elemento--1">
+      </figure>
 
-        </div> 
+      <figure class="galleria__elemento galleria__elemento--2">
+      </figure>
 
-    </div> 
+      <figure class="galleria__elemento galleria__elemento--3">
+      </figure>
 
- 
+      <figure class="galleria__elemento galleria__elemento--4">
+      </figure>
 
-</x-layout> 
+      <figure class="galleria__elemento galleria__elemento--5">
+      </figure>
+
+      <figure class="galleria__elemento galleria__elemento--6">
+      </figure>
+
+    </div>
+
+  </div>
+
+  </header>
+
+
+  <!-- FINE GRID -->
+
+
+
+
+
+
+
+    <div class="container">
+
+        <div class="row">
+
+            @foreach($products as $product)
+
+            <div class="col-12 col-md-3">
+
+            <a style="text-decoration: none;" href="{{route('product.show',$product)}}"><x-cards :Product='$product'></x-cards></a>
+
+            </div>
+
+            @endforeach
+
+        </div>
+
+    </div>
+
+
+
+</x-layout>

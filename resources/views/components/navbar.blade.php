@@ -1,8 +1,6 @@
-<nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+<nav class="navbar navbar-expand-lg fixed-top navbar-blur" id="navbar">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">TelaElegante</a>
-
-
+    <a class="navbar-brand" style="font-size: 30px" href="{{route('welcome')}}">TelaElegante</a>
 
 
 

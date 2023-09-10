@@ -1,16 +1,15 @@
 <x-layout>
 
+<br>
+<br>
 
-
-<div class="container">
+<div class="container my-5">
     <div class="row">
         <div class="col-12 col-md-6">
 <h1>LOGGATI</h1>
 
 
-
 <form action="{{route('login')}}" method="POST">
-
 @csrf
   <div class="mb-3">
     <label class="form-label">Email address</label>
