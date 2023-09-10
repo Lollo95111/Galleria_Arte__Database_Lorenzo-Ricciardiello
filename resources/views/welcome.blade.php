@@ -13,10 +13,9 @@
     <section class="section watch"><h1 class="title" >Un Viaggio nell'Arte Contemporanea</h1></section>
 
 
-    <?xml version="1.0" standalone="no"?>
-    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
-     "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-    <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+    
+    
+    <svg class="fixed-bottom" version="1.0" xmlns="http://www.w3.org/2000/svg"
      width="700px" height="600px" viewBox="0 0 1280.000000 1153.000000"
      preserveAspectRatio="xMidYMid meet">
     <metadata>

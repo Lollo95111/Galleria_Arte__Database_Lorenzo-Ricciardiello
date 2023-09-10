@@ -1,12 +1,13 @@
-<nav class="navbar navbar-expand-lg navbar-blur" id="navbar">
+
+
+<nav class="navbar navbar-expand-lg navbar-blur fixed-top" id="navbar">
   <div class="container-fluid">
     <a class="navbar-brand" style="font-size: 30px" href="{{route('welcome')}}">TelaElegante</a>
 
 
 
-    <?xml version="1.0" standalone="no"?>
-    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
-     "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+    
+    
     <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
      width="20px" height="20px" viewBox="0 0 1280.000000 1153.000000"
      preserveAspectRatio="xMidYMid meet">
