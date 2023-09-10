@@ -1,2 +1,125 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
+
+*{
+    font-family: monospace;
+}
+
+:root{
+    :root{
+        --col1: rgb(12, 12, 12);
+        --col2: rgb(70, 70, 70);
+        --col3:  rgb(197, 195, 195);
+     }
+
+}
+
+
+.bg-1{
+    background-color: var(--col1) !important;
+}
+
+.bg-2{
+    background-color: var(--col2) !important;
+}
+
+.bg-3{
+    background-color: var(--col3) !important;
+}
+
+/*! NAVBAR */
+
+
+
+.navbar-btn {
+    margin-right: 10px;
+    background-color: burlywood;
+  }
+
+.navbar{
+    background-color: transparent;
+
+}
+
+
+
+
+
+
+.video-bg{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    opacity: 0.5;
+    z-index: 0;
+  }
+
+
+
+
+
+  .section{
+
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+
+  }
+
+  .title{
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-right: 25%;
+    transform: scale(1);
+    transition: all 1s cubic-bezier(.215, .61, .355, 1);
+  opacity: 0;
+  background:  linear-gradient(90deg, rgba(228,166,50,0.7092086834733893) 0%, rgba(200,139,25,1) 0%, rgba(219,147,45,0.7008053221288515) 0%);
+    -webkit-background-clip: text; /* Per rendere il testo visibile solo nelle aree del gradient */
+    background-clip: text;
+    color: transparent;
+  }
+
+
+  .section.in-page .title{
+    transform: scale(1.2);
+  opacity: 1;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+.card{
+    box-shadow:5px 2px 5px 5px lightgrey;
+    border: none;
+    border-radius: 10%;
+    transform: scale(1);
+    transition: 1s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+.card:hover{
+    transform: scale(1.1);
+    transition:1s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+.card img{
+    border-top-left-radius:10% ;
+    border-top-right-radius: 10%;
+
+}
