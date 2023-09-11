@@ -47,7 +47,11 @@
                     <h2>Categoria :</h2>
                 </div>
                 <div class="col-6">
-                    <h2>Categoria</h2>
+                    @if($product->category)
+                    <h2>{{ $product->category->name }}</h2>
+                    @else
+                    <h2>Senza Categoria</h2>
+                    @endif
                 </div>
             </div>
 

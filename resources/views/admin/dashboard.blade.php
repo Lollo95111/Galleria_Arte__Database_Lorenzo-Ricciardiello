@@ -49,11 +49,16 @@
     </tr>
   </thead>
   <tbody>
+
     @foreach($products as $product)
     <tr>
       <th scope="row">{{$product->id}}</th>
       <td>{{$product->name}}</td>
-      <td>{{$product->category}}</td>
+      @if($product->category)
+      <td>{{ $product->category->name }}</td>
+            @else
+            <td>Senza Categoria</td>
+            @endif
       <td>{{$product->gender}}</td>
       <td>{{$product->price}}</td>
       <td>

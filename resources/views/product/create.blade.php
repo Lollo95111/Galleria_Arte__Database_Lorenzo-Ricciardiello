@@ -10,7 +10,7 @@
                 <div class="add">
                     <div class="add-body">
                         <h1 class="text-center mb-4">AGGIUNGI NUOVO QUADRO</h1>
-                        <x-form></x-form>
+                        <x-form :categories="$categories"/>
                     </div>
                 </div>
             </div>

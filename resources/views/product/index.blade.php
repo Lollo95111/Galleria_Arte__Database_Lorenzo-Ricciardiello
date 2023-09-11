@@ -4,7 +4,7 @@
 <br>
 <br>
 
-<video class="video-bg" src="/pittura6.mp4" autoplay muted loop></video>
+<video class="video-bg" src="/index.mp4" autoplay muted loop></video>
 
 
 
@@ -53,7 +53,7 @@
 
             <div class="col-12 col-md-3">
 
-            <a style="text-decoration: none;" href="{{route('product.show',$product)}}"><x-cards :Product='$product'></x-cards></a>
+            <a style="text-decoration: none;" href="{{route('product.show',$product)}}"><x-cards  :product=$product></x-cards></a>
 
             </div>
 

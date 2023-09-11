@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -28,7 +29,10 @@ class ProductController extends Controller
      * Show the form for creating a new resource.
      */
     public function create(){
-        return view('product.create');
+
+        $categories = Category::all();
+
+        return view('product.create',compact('categories'));
        }
 
 
@@ -40,6 +44,7 @@ class ProductController extends Controller
         Product::create([
             'name'=>$request->input('name'),
             'price'=>$request->input('price'),
+            'category_id'=>$request->input('category_id'),
             'img'=>$request->file('img')->store('public/product')
             ]);
 
@@ -59,6 +64,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
+
         return view('product.show',compact('product'));
     }
 
@@ -84,7 +90,7 @@ class ProductController extends Controller
 
         $product->update([
 
-            'name'=> $request->input('title'),
+            'name'=> $request->input('name'),
             'price' => $request->input('price'),
 
             'img' => $request->file('img') != null ? $request->file('img')->store('public/product') : $product->img
