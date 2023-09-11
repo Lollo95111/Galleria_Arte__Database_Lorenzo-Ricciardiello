@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
@@ -42,6 +43,13 @@ class ProductController extends Controller
             'img'=>$request->file('img')->store('public/product')
             ]);
 
+        //     if ($request->file('img') == null) {
+
+        // return redirect()->route('product.create')->with('message','AGGIUNGERE IMMAGINE');
+
+        //     }
+
+
      return redirect()->route('product.create')->with('message','Prodotto aggiunto con successo');
 
     }
@@ -67,27 +75,35 @@ class ProductController extends Controller
      * Update the specified resource in storage.
      */
     public function update(Request $request, Product $product)
+
     {
+
+        $oldImg = $product->img;
+
+
 
         $product->update([
 
-        $product->name = $request->name,
+            'name'=> $request->input('title'),
+            'price' => $request->input('price'),
 
-        $product->price = $request->price,
+            'img' => $request->file('img') != null ? $request->file('img')->store('public/product') : $product->img
 
         ]);
 
-        if($request->img){
 
-            $product->update ([
 
-                $product->img = $request->file('img')->store('public/product')
+        if ($request->file('img') != null) {
 
-            ]);
-        }
-    return redirect()->route('product.index')->with('message',"il prodotto $product->name è stato modificato correttamente!");
+            Storage::delete($oldImg);
 
         }
+
+
+
+        return redirect()->route('admin.dashboard')->with('message',"il prodotto $product->name è stato modificato correttamente!");
+
+    }
 
 
 

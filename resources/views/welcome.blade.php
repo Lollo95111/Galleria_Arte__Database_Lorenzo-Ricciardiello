@@ -13,9 +13,9 @@
     <section class="section watch"><h1 class="title" >Un Viaggio nell'Arte Contemporanea</h1></section>
 
 
-    
-    
-    <svg class="fixed-bottom" version="1.0" xmlns="http://www.w3.org/2000/svg"
+
+
+    <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
      width="700px" height="600px" viewBox="0 0 1280.000000 1153.000000"
      preserveAspectRatio="xMidYMid meet">
     <metadata>

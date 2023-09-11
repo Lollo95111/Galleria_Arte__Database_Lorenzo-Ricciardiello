@@ -3,11 +3,25 @@
 <br>
 
 <style>
+    button{
+        background-color: rgb(220, 12, 12);
+        border: none;
+        border-radius:20%;
+        width: 80px;
+        height: 30px;
+    }
+    button:hover{
+        background-color: rgb(41, 58, 143);
+    }
+
     .container{
         position: relative;
         z-index: 99;
     }
+
 </style>
+
+
 
 
 
@@ -46,7 +60,7 @@
 
 <div class="d-flex justify-content-between">
 
-        <a href="{{route('product.edit',compact('product'))}}" class="btn">Modifica</a>
+        <a style="background-color: burlywood" href="{{route('product.edit',compact('product'))}}" class="btn">Modifica</a>
 
 <form action="{{route('product.delete', compact('product'))}}" method="POST">
         @method('DELETE')
